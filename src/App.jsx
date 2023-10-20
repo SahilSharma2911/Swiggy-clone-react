@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Header from './component/Header';
@@ -9,17 +10,38 @@ import Info from './component/Info';
 import Footer from './component/Footer';
 import Login from './component/Login';
 import { createRoot } from "react-dom/client";
+import Header2 from './component/Header2';
 
 
 function App() {
+  const [showHeader2, setShowHeader2] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+  const handleScroll = () => {
+    const scrollY = window.scrollY;
+    const threshold = 1200; 
+
+    if (scrollY > threshold) {
+      setShowHeader2(true);
+    } else {
+      setShowHeader2(false);
+    }
+  };
   return (
     <>
-      <Header/>
-      <Banner/>
-      <Food_item/>
-      <Restaurant_1_item/>
-      <Info/>
-      <Footer/>
+      {showHeader2 ? <Header2 /> : <Header />}
+      <Banner />
+      <Food_item />
+      <Restaurant_1_item />
+      <Restaurant_2_item />
+      <Info />
+      <Footer />
     </>
   );
 }

@@ -10,6 +10,7 @@ const Info = () => {
     return (
         <>
             <div className='px-4 lg:px-[115px] pt-[60px]'>
+            <hr className="mb-[50px]" />
                 <div>
                     <h2 className='font-bold text-[23px] mb-5 px-2'>Food culture in Bangalore</h2>
                 </div>

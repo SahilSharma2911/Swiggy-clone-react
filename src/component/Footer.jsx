@@ -17,7 +17,7 @@ const Footer = () => {
                             alt="" className='h-[80px] w-[200px] p-2' />
                     </div>
                 </div>
-                <div className="bg-black flex flex-col lg:flex-row px-[12vw] sm:px-[25vw] md:px-[23vw] lg:px-[10vw] xl:px-[15vw] py-10">
+                <div className="bg-black flex flex-col lg:flex-row px-[12vw] sm:px-[25vw] md:px-[23vw] lg:px-[10vw] xl:px-[15vw] py-10 justify-between">
                     <div className='mb-5 lg:mb-0' >
                         <div className=' text-white mx-6'>
                             <div className='flex'>
